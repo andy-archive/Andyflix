@@ -9,6 +9,8 @@ import UIKit
 
 final class MovieSignupViewController: BaseViewController {
     
+    private let viewModel = MovieSignupViewModel()
+    
     private let titleLabel = {
         let view = UILabel()
         view.font = .boldSystemFont(ofSize: 30)
@@ -29,6 +31,7 @@ final class MovieSignupViewController: BaseViewController {
     
     private let idTextField = {
         let view = MovieSignupTextField()
+        view.keyboardType = .emailAddress
         view.attributedPlaceholder = NSAttributedString(string: "이메일 주소 또는 전화번호", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.6)])
         return view
     }()
@@ -54,6 +57,7 @@ final class MovieSignupViewController: BaseViewController {
     
     private let referralCodeTextField = {
         let view = MovieSignupTextField()
+        view.keyboardType = .numberPad
         view.attributedPlaceholder = NSAttributedString(string: "추천 코드 입력", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white.withAlphaComponent(0.6)])
         return view
     }()
@@ -62,6 +66,7 @@ final class MovieSignupViewController: BaseViewController {
         let view = UIButton()
         view.setTitle("회원가입", for: .normal)
         view.setTitleColor(.black, for: .normal)
+        view.setTitleColor(.white, for: .highlighted)
         view.titleLabel?.font = .boldSystemFont(ofSize: 17)
         view.backgroundColor = .white
         view.layer.masksToBounds = true
@@ -94,10 +99,55 @@ final class MovieSignupViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        bindViewModel()
+        hideKeyboardWhenTappedAround()
+    }
+    
+    private func bindViewModel() {
+        viewModel.id.bind { [weak self] text in
+            self?.idTextField.text = text
+        }
+        
+        viewModel.password.bind { [weak self] text in
+            self?.passwordTextField.text = text
+        }
+        
+        viewModel.referralCode.bind { [weak self] text in
+            self?.referralCodeTextField.text = text
+        }
+        
+        viewModel.isValid.bind { [weak self] bool in
+            self?.signupButton.isEnabled = bool
+            self?.signupButton.backgroundColor = bool ? .systemRed : .white
+        }
+    }
+    
+    @objc
+    private func idTextFieldChanged() {
+        guard let text = idTextField.text else { return }
+        viewModel.id.value = text
+        viewModel.checkValidation()
+    }
+    
+    @objc
+    private func passwordTextFieldChanged() {
+        guard let text = passwordTextField.text else { return }
+        viewModel.password.value = text
+        viewModel.checkValidation()
+    }
+    
+    @objc
+    private func referralCodeTextFieldChanged() {
+        guard let text = referralCodeTextField.text else { return }
+        viewModel.referralCode.value = text
+        viewModel.checkValidation()
     }
     
     override func configureView() {
         super.configureView()
+        
+        titleLabel.text = "ANDYFLIX"
         
         view.addSubview(titleLabel)
         view.addSubview(signupStackView)
@@ -111,7 +161,9 @@ final class MovieSignupViewController: BaseViewController {
             extraInfoStackView.addArrangedSubview(view)
         }
         
-        titleLabel.text = "ANDYFLIX"
+        idTextField.addTarget(self, action: #selector(idTextFieldChanged), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(passwordTextFieldChanged), for: .editingChanged)
+        referralCodeTextField.addTarget(self, action: #selector(referralCodeTextFieldChanged), for: .editingChanged)
     }
     
     override func setConstraints() {
