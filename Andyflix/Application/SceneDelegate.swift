@@ -16,7 +16,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
 
-        let firstNav = UINavigationController(rootViewController: MovieLoginViewController())
+        let firstNav = UINavigationController(rootViewController: MovieSignupViewController())
         let secondNav = UINavigationController(rootViewController: RandomPhotoViewController())
 
         let tabBarController = UITabBarController()

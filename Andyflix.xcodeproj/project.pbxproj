@@ -11,8 +11,10 @@
 		38985B4F2AB83E0A00BBDF5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38985B4E2AB83E0A00BBDF5E /* SceneDelegate.swift */; };
 		38985B562AB83E0B00BBDF5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38985B552AB83E0B00BBDF5E /* Assets.xcassets */; };
 		38985B592AB83E0B00BBDF5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38985B572AB83E0B00BBDF5E /* LaunchScreen.storyboard */; };
-		38985B692AB8436900BBDF5E /* MovieLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38985B682AB8436900BBDF5E /* MovieLoginViewController.swift */; };
 		38985B6B2AB8439D00BBDF5E /* RandomPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38985B6A2AB8439D00BBDF5E /* RandomPhotoViewController.swift */; };
+		38985B6E2AB8626D00BBDF5E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38985B6D2AB8626D00BBDF5E /* BaseViewController.swift */; };
+		38985B762AB87F5700BBDF5E /* MovieSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38985B752AB87F5700BBDF5E /* MovieSignupViewController.swift */; };
+		38985B782AB8808500BBDF5E /* MovieSignupTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38985B772AB8808500BBDF5E /* MovieSignupTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +24,10 @@
 		38985B552AB83E0B00BBDF5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38985B582AB83E0B00BBDF5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38985B5A2AB83E0B00BBDF5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38985B682AB8436900BBDF5E /* MovieLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLoginViewController.swift; sourceTree = "<group>"; };
 		38985B6A2AB8439D00BBDF5E /* RandomPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPhotoViewController.swift; sourceTree = "<group>"; };
+		38985B6D2AB8626D00BBDF5E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		38985B752AB87F5700BBDF5E /* MovieSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSignupViewController.swift; sourceTree = "<group>"; };
+		38985B772AB8808500BBDF5E /* MovieSignupTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSignupTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +84,7 @@
 		38985B622AB8420000BBDF5E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				38985B682AB8436900BBDF5E /* MovieLoginViewController.swift */,
+				38985B752AB87F5700BBDF5E /* MovieSignupViewController.swift */,
 				38985B6A2AB8439D00BBDF5E /* RandomPhotoViewController.swift */,
 			);
 			path = View;
@@ -111,8 +115,34 @@
 		38985B672AB8425E00BBDF5E /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				38985B722AB8697F00BBDF5E /* Observable */,
+				38985B6F2AB864C200BBDF5E /* CustomView */,
+				38985B6C2AB8626600BBDF5E /* Base */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		38985B6C2AB8626600BBDF5E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				38985B6D2AB8626D00BBDF5E /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		38985B6F2AB864C200BBDF5E /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				38985B772AB8808500BBDF5E /* MovieSignupTextField.swift */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		38985B722AB8697F00BBDF5E /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Observable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,10 +215,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38985B6E2AB8626D00BBDF5E /* BaseViewController.swift in Sources */,
 				38985B6B2AB8439D00BBDF5E /* RandomPhotoViewController.swift in Sources */,
-				38985B692AB8436900BBDF5E /* MovieLoginViewController.swift in Sources */,
+				38985B782AB8808500BBDF5E /* MovieSignupTextField.swift in Sources */,
 				38985B4D2AB83E0A00BBDF5E /* AppDelegate.swift in Sources */,
 				38985B4F2AB83E0A00BBDF5E /* SceneDelegate.swift in Sources */,
+				38985B762AB87F5700BBDF5E /* MovieSignupViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
