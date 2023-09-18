@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		38985B4D2AB83E0A00BBDF5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38985B4C2AB83E0A00BBDF5E /* AppDelegate.swift */; };
 		38985B4F2AB83E0A00BBDF5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38985B4E2AB83E0A00BBDF5E /* SceneDelegate.swift */; };
-		38985B512AB83E0A00BBDF5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38985B502AB83E0A00BBDF5E /* ViewController.swift */; };
-		38985B542AB83E0A00BBDF5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38985B522AB83E0A00BBDF5E /* Main.storyboard */; };
 		38985B562AB83E0B00BBDF5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38985B552AB83E0B00BBDF5E /* Assets.xcassets */; };
 		38985B592AB83E0B00BBDF5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38985B572AB83E0B00BBDF5E /* LaunchScreen.storyboard */; };
+		38985B692AB8436900BBDF5E /* MovieLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38985B682AB8436900BBDF5E /* MovieLoginViewController.swift */; };
+		38985B6B2AB8439D00BBDF5E /* RandomPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38985B6A2AB8439D00BBDF5E /* RandomPhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		38985B492AB83E0A00BBDF5E /* Andyflix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Andyflix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38985B4C2AB83E0A00BBDF5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		38985B4E2AB83E0A00BBDF5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		38985B502AB83E0A00BBDF5E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		38985B532AB83E0A00BBDF5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38985B552AB83E0B00BBDF5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		38985B582AB83E0B00BBDF5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		38985B5A2AB83E0B00BBDF5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38985B682AB8436900BBDF5E /* MovieLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieLoginViewController.swift; sourceTree = "<group>"; };
+		38985B6A2AB8439D00BBDF5E /* RandomPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomPhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,63 @@
 		38985B4B2AB83E0A00BBDF5E /* Andyflix */ = {
 			isa = PBXGroup;
 			children = (
-				38985B4C2AB83E0A00BBDF5E /* AppDelegate.swift */,
-				38985B4E2AB83E0A00BBDF5E /* SceneDelegate.swift */,
-				38985B502AB83E0A00BBDF5E /* ViewController.swift */,
-				38985B522AB83E0A00BBDF5E /* Main.storyboard */,
+				38985B672AB8425E00BBDF5E /* Utility */,
+				38985B602AB841F200BBDF5E /* Application */,
 				38985B552AB83E0B00BBDF5E /* Assets.xcassets */,
-				38985B572AB83E0B00BBDF5E /* LaunchScreen.storyboard */,
 				38985B5A2AB83E0B00BBDF5E /* Info.plist */,
+				38985B652AB8423700BBDF5E /* Model */,
+				38985B632AB8420E00BBDF5E /* Storyboard */,
+				38985B622AB8420000BBDF5E /* View */,
+				38985B662AB8424400BBDF5E /* ViewModel */,
 			);
 			path = Andyflix;
+			sourceTree = "<group>";
+		};
+		38985B602AB841F200BBDF5E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				38985B4C2AB83E0A00BBDF5E /* AppDelegate.swift */,
+				38985B4E2AB83E0A00BBDF5E /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		38985B622AB8420000BBDF5E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				38985B682AB8436900BBDF5E /* MovieLoginViewController.swift */,
+				38985B6A2AB8439D00BBDF5E /* RandomPhotoViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		38985B632AB8420E00BBDF5E /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				38985B572AB83E0B00BBDF5E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		38985B652AB8423700BBDF5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		38985B662AB8424400BBDF5E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		38985B672AB8425E00BBDF5E /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +175,6 @@
 			files = (
 				38985B592AB83E0B00BBDF5E /* LaunchScreen.storyboard in Resources */,
 				38985B562AB83E0B00BBDF5E /* Assets.xcassets in Resources */,
-				38985B542AB83E0A00BBDF5E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +185,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38985B512AB83E0A00BBDF5E /* ViewController.swift in Sources */,
+				38985B6B2AB8439D00BBDF5E /* RandomPhotoViewController.swift in Sources */,
+				38985B692AB8436900BBDF5E /* MovieLoginViewController.swift in Sources */,
 				38985B4D2AB83E0A00BBDF5E /* AppDelegate.swift in Sources */,
 				38985B4F2AB83E0A00BBDF5E /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +195,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		38985B522AB83E0A00BBDF5E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				38985B532AB83E0A00BBDF5E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		38985B572AB83E0B00BBDF5E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,9 +332,9 @@
 				INFOPLIST_FILE = Andyflix/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +342,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andyarchive.Andyflix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,9 +363,9 @@
 				INFOPLIST_FILE = Andyflix/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +373,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.andyarchive.Andyflix;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
